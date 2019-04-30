@@ -19,4 +19,15 @@ public enum Day implements Serializable, Comparable<Day>{
 	public static Day get (String abbreviation) {
 		return lookup.get(abbreviation);
 	}
+	
+	public static Day[] values()
+	{
+		
+		for (Day c : Day.values())
+		
+		    System.out.println(c);
+		
+	}
+	
+	
 }

@@ -55,8 +55,10 @@ public class Game extends Application {
 
 			FXMLLoader loader = new FXMLLoader();
 			loader = new FXMLLoader(getClass().getResource("/game/app/view/Sudoku.fxml"));
+			//pointing to Sudoku.fxml file
 			BorderPane SudokuPane = (BorderPane) loader.load();			
 			GameBorderPane.setCenter(SudokuPane);
+			//
 			SC = loader.getController();
 			SC.setMainApp(this);
 			primaryStage.show();

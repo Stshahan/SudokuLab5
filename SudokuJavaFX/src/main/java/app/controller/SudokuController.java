@@ -1,5 +1,5 @@
 package app.controller;
-
+import javafx.application.Application;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -42,12 +42,15 @@ public class SudokuController implements Initializable {
 	@FXML
 	private void ButtonPush(ActionEvent event) {
 		BuildGrid();
+		//Button btn = (Button) event.getSource();
+		
+		
 	}
 
 	private void BuildGrid() {
 		Sudoku s = game.StartSudoku(9);
 
-		vboxCenter.getChildren().clear();
+		vboxCenter.getChildren().clear();//gets rid of anything added to container controller
 		GridPane gridPane = new GridPane();
 		gridPane.getStyleClass().add("GridPane");
 		gridPane.setCenterShape(true);
